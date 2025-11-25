@@ -1,7 +1,9 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public float speed = 5.0f;
     void Start()
     {
         
@@ -11,6 +13,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // We'll move the vehicle forward
-        transform.Translate(Vector3.forward * Time.deltaTime * 20);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 }
