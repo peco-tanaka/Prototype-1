@@ -3,16 +3,15 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     public GameObject player;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Vector3 offset = new Vector3(0, 5, -7);
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         // OFFSET THE CAMERA BEHIND THE PLAYER BY Adding to the player's position
-        transform.position = player.transform.position + new Vector3(0, 5, -7);
+        transform.position = player.transform.position + offset;
     }
 }
